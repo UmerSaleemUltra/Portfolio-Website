@@ -35,9 +35,26 @@
   box-shadow: none;
   transform: translateY(4px);
 }
+/* Common styles */
+.rc-progress-line {
+    width: 100%;
+}
+
+/* Additional CSS for responsiveness */
+@media screen and (max-width: 640px) {
+    .max-w-xl {
+        max-width: 100%;
+    }
+    .rc-progress-line {
+        width: 100%;
+    }
+}
+
+/* You can adjust other styles as needed */
 
 
 </style>
+    
 <body>
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
