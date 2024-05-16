@@ -17,6 +17,29 @@
 }
 
 </style>
+   <style>
+        /* Your existing styles */
+        .dark-mode {
+            padding: 25px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        /* Styles for dark mode icon */
+        .dark-mode-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            vertical-align: middle; /* Align the icon vertically */
+        }
+    </style>
+</head>
+<body>
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-white text-2xl font-bold">UmerSaleemUltra</div>
@@ -37,14 +60,22 @@
                     class="text-white hover:text-gray-300">Projects</a>
                 <a href="https://wa.link/ch1qzi"
                     class="text-white hover:text-gray-300">Contact</a>
-                
             </div>
-
-
-
-
         </div>
     </nav>
+
+    <!-- Dark mode toggle button with icon -->
+    <button onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-toggles dark-mode-icon" viewBox="0 0 16 16">
+            <path d="M4.5 9a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 0 0-7zm7 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m-7-14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m2.45 0A3.5 3.5 0 0 1 8 3.5 3.5 3.5 0 0 1 6.95 6h4.55a2.5 2.5 0 0 0 0-5zM4.5 0h7a3.5 3.5 0 1 1 0 7h-7a3.5 3.5 0 1 1 0-7"/>
+        </svg>
+    </button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 
     <script>
         document.getElementById('nav-toggle').addEventListener('click', function () {
