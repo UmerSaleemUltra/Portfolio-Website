@@ -86,17 +86,22 @@
         };
     </script>
 
-    <div>
-        <div class="flex h-screen items-center justify-center bg-gray-900 p-5">
-            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-10 md:px-10">
-                <div>
-                    <h1 class="mb-2 text-3xl font-bold text-white"><span
-                            class="text-green-500">Hi,</span> I'm Full Stack Developer</h1>
-                   <style>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect with Tailwind CSS</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
         .typewriter {
             overflow: hidden; /* Ensures the text doesn't overflow its container */
+            border-right: .15em solid orange; /* Vertical line representing the cursor */
             white-space: nowrap; /* Keeps the text on a single line */
-            border-right: .15em solid white; /* Vertical line representing the cursor */
+            margin: 0 auto; /* Centers the text horizontally */
+            letter-spacing: .15em; /* Adjusts spacing between characters */
             animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
         /* Typing animation */
@@ -107,26 +112,17 @@
         /* Blinking cursor animation */
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: white; }
+            50% { border-color: orange; }
         }
     </style>
-
-    <div class="flex h-screen items-center justify-center p-5">
-        <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-10 md:px-10">
-            <div>
-               
-                <!-- Container for the text to be animated -->
-                <div class="text-white">
-                    <!-- Text with typing effect -->
-                    <p class="typewriter mb-6"></p>
-                </div>
-            </div>
-        </div>
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+    <div class="text-4xl font-bold text-center">
+        <h1 class="typewriter">Hello, World!</h1>
     </div>
-
     <script>
         // JavaScript for typewriter effect
-        const text = "I'm Umer Saleem, a student programmer specializing in HTML, CSS, and JavaScript. My goal is to become a Software Engineer. And I am currently learning MERN Stack Development."; // Text to be typed
+        const text = "Hello, World!"; // Text to be typed
         let index = 0;
 
         function type() {
@@ -144,6 +140,8 @@
             type();
         };
     </script>
+</body>
+</html>
 
                     <div class="flex justify-center space-x-5">
 
