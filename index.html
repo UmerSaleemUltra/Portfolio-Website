@@ -17,59 +17,6 @@
 }
 
 </style>
-<style>
-  
-
-    .cursor {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        position: fixed;
-        z-index: 9999;
-        pointer-events: none; /* Ensure the cursor does not interfere with mouse events */
-    }
-
-    /* Animation */
-    @keyframes pulse {
-        0% { transform: scale(0.8); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(0.8); }
-    }
-
-    /* Apply animation to the cursor */
-    .cursor {
-        animation: pulse 1.5s infinite alternate;
-    }
-
-    /* Different shapes for cursor */
-    .circle {
-        background-color: rgba(255, 0, 0, 0.5);
-    }
-
-    
-
-</style>
-</head>
-<body>
-    <div class="cursor circle"></div>
-    <script>
-        // JavaScript to track mouse movement and update cursor position
-        document.addEventListener("mousemove", function(event) {
-            var cursor = document.querySelector('.cursor');
-            cursor.style.top = (event.clientY - cursor.offsetHeight / 2) + 'px';
-            cursor.style.left = (event.clientX - cursor.offsetWidth / 2) + 'px';
-        });
-
-        // JavaScript to change cursor shape
-        document.addEventListener("mouseover", function(event) {
-            var cursor = document.querySelector('.cursor');
-            cursor.classList.remove("circle", "square", "triangle");
-            var shapes = ["circle", "square", "triangle"];
-            var randomShape = shapes[Math.floor(Math.random() * shapes.length)];
-            cursor.classList.add(randomShape);
-        });
-    </script>
-
     
           <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
